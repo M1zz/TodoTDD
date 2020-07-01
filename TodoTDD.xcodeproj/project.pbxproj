@@ -15,6 +15,9 @@
 		A50E202224AC74CA00838649 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A50E202024AC74CA00838649 /* LaunchScreen.storyboard */; };
 		A50E202D24AC74CA00838649 /* TodoTDDTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A50E202C24AC74CA00838649 /* TodoTDDTests.swift */; };
 		A50E203824AC74CA00838649 /* TodoTDDUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A50E203724AC74CA00838649 /* TodoTDDUITests.swift */; };
+		A5D21D4824AC807D000DA380 /* ItemListViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5D21D4724AC807D000DA380 /* ItemListViewControllerTests.swift */; };
+		A5D21D4B24AC811B000DA380 /* ItemListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5D21D4A24AC811B000DA380 /* ItemListViewController.swift */; };
+		A5D21D4D24AC9D2C000DA380 /* ItemListDataProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5D21D4C24AC9D2C000DA380 /* ItemListDataProvider.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +52,9 @@
 		A50E203324AC74CA00838649 /* TodoTDDUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TodoTDDUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		A50E203724AC74CA00838649 /* TodoTDDUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoTDDUITests.swift; sourceTree = "<group>"; };
 		A50E203924AC74CA00838649 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A5D21D4724AC807D000DA380 /* ItemListViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemListViewControllerTests.swift; sourceTree = "<group>"; };
+		A5D21D4A24AC811B000DA380 /* ItemListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemListViewController.swift; sourceTree = "<group>"; };
+		A5D21D4C24AC9D2C000DA380 /* ItemListDataProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemListDataProvider.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,6 +105,7 @@
 		A50E201424AC74C800838649 /* TodoTDD */ = {
 			isa = PBXGroup;
 			children = (
+				A5D21D4924AC80FB000DA380 /* ViewControllers */,
 				A50E201524AC74C800838649 /* AppDelegate.swift */,
 				A5D21D4524AC78D7000DA380 /* Storyboards */,
 				A50E201724AC74C800838649 /* SceneDelegate.swift */,
@@ -112,6 +119,7 @@
 		A50E202B24AC74CA00838649 /* TodoTDDTests */ = {
 			isa = PBXGroup;
 			children = (
+				A5D21D4624AC8047000DA380 /* ViewControllers */,
 				A50E202C24AC74CA00838649 /* TodoTDDTests.swift */,
 				A50E202E24AC74CA00838649 /* Info.plist */,
 			);
@@ -134,6 +142,23 @@
 				A50E202024AC74CA00838649 /* LaunchScreen.storyboard */,
 			);
 			path = Storyboards;
+			sourceTree = "<group>";
+		};
+		A5D21D4624AC8047000DA380 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				A5D21D4724AC807D000DA380 /* ItemListViewControllerTests.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		A5D21D4924AC80FB000DA380 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				A5D21D4A24AC811B000DA380 /* ItemListViewController.swift */,
+				A5D21D4C24AC9D2C000DA380 /* ItemListDataProvider.swift */,
+			);
+			path = ViewControllers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -268,6 +293,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				A50E201A24AC74C800838649 /* ViewController.swift in Sources */,
+				A5D21D4D24AC9D2C000DA380 /* ItemListDataProvider.swift in Sources */,
+				A5D21D4B24AC811B000DA380 /* ItemListViewController.swift in Sources */,
 				A50E201624AC74C800838649 /* AppDelegate.swift in Sources */,
 				A50E201824AC74C800838649 /* SceneDelegate.swift in Sources */,
 			);
@@ -278,6 +305,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A50E202D24AC74CA00838649 /* TodoTDDTests.swift in Sources */,
+				A5D21D4824AC807D000DA380 /* ItemListViewControllerTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
