@@ -14,4 +14,13 @@ class ItemListViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
     }
+    
+    @IBAction func addItem(_ sender: UIBarButtonItem) {
+        guard let inputViewController = storyboard?.instantiateViewController(withIdentifier: "InputViewController") as? InputViewController else {
+          return
+        }
+        //inputViewController.itemManager = dataProvider.itemManager
+        print("hey")
+        present(inputViewController, animated: true, completion: nil)
+    }
 }

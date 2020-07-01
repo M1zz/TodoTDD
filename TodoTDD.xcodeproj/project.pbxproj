@@ -18,6 +18,7 @@
 		A5D21D4824AC807D000DA380 /* ItemListViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5D21D4724AC807D000DA380 /* ItemListViewControllerTests.swift */; };
 		A5D21D4B24AC811B000DA380 /* ItemListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5D21D4A24AC811B000DA380 /* ItemListViewController.swift */; };
 		A5D21D4D24AC9D2C000DA380 /* ItemListDataProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5D21D4C24AC9D2C000DA380 /* ItemListDataProvider.swift */; };
+		A5D21D4F24ACA591000DA380 /* InputViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5D21D4E24ACA591000DA380 /* InputViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,6 +56,7 @@
 		A5D21D4724AC807D000DA380 /* ItemListViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemListViewControllerTests.swift; sourceTree = "<group>"; };
 		A5D21D4A24AC811B000DA380 /* ItemListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemListViewController.swift; sourceTree = "<group>"; };
 		A5D21D4C24AC9D2C000DA380 /* ItemListDataProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemListDataProvider.swift; sourceTree = "<group>"; };
+		A5D21D4E24ACA591000DA380 /* InputViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InputViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -157,6 +159,7 @@
 			children = (
 				A5D21D4A24AC811B000DA380 /* ItemListViewController.swift */,
 				A5D21D4C24AC9D2C000DA380 /* ItemListDataProvider.swift */,
+				A5D21D4E24ACA591000DA380 /* InputViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -295,6 +298,7 @@
 				A50E201A24AC74C800838649 /* ViewController.swift in Sources */,
 				A5D21D4D24AC9D2C000DA380 /* ItemListDataProvider.swift in Sources */,
 				A5D21D4B24AC811B000DA380 /* ItemListViewController.swift in Sources */,
+				A5D21D4F24ACA591000DA380 /* InputViewController.swift in Sources */,
 				A50E201624AC74C800838649 /* AppDelegate.swift in Sources */,
 				A50E201824AC74C800838649 /* SceneDelegate.swift in Sources */,
 			);
