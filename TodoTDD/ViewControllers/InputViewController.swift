@@ -17,6 +17,7 @@ class InputViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var datePicker: UIDatePicker!
     
     lazy var geocoder = CLGeocoder()
+    var itemManager: ToDoItemManager?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -65,12 +66,17 @@ class InputViewController: UIViewController, UITextFieldDelegate {
                     placeMark = placeMarks?.first
                     
                     // TODO:- Add model
+                    let item = ToDoItem(title: titleString,
+                                        itemDescription: descriptionString,
+                                        timeStamp: date?.timeIntervalSince1970,
+                                        location: nil)
+                    self?.itemManager?.add(item)
+                    self?.dismiss(animated: true)
                     
-                    
-                    DispatchQueue.main.async {
-                      //self?.itemManager?.add(item)
-                      self?.dismiss(animated: true)
-                    }
+//                    DispatchQueue.main.async {
+//                      //self?.itemManager?.add(item)
+//                      self?.dismiss(animated: true)
+//                    }
                 }
             }
         }
