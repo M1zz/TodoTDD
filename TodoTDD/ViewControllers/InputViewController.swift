@@ -9,6 +9,9 @@
 import UIKit
 import CoreLocation
 
+let DidDismissInputViewController: Notification.Name = Notification.Name("DidDismissInputViewController")
+
+
 class InputViewController: UIViewController, UITextFieldDelegate {
     
     @IBOutlet weak var titleTextField: UITextField!
@@ -17,7 +20,7 @@ class InputViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var datePicker: UIDatePicker!
     
     lazy var geocoder = CLGeocoder()
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -71,6 +74,7 @@ class InputViewController: UIViewController, UITextFieldDelegate {
                                         location: nil)
 //                    self?.itemManager?.add(item)
                     ToDoItemManager.shared.add(item)
+                    NotificationCenter.default.post(name: DidDismissInputViewController, object: nil, userInfo: nil)
                     self?.dismiss(animated: true)
                     
 //                    DispatchQueue.main.async {

@@ -16,11 +16,10 @@ class ItemListViewController: UIViewController {
         
         tableView.delegate = self
         tableView.dataSource = self
+        
+        NotificationCenter.default.addObserver(self, selector: #selector(self.didDismissInputViewController), name: DidDismissInputViewController, object: nil)
     }
     
-    override func viewWillAppear(_ animated: Bool) {
-        tableView.reloadData()
-    }
     
     @IBAction func addItem(_ sender: UIBarButtonItem) {
         guard let inputViewController = storyboard?.instantiateViewController(withIdentifier: "InputViewController") as? InputViewController else {
@@ -29,6 +28,10 @@ class ItemListViewController: UIViewController {
         //inputViewController.itemManager = dataProvider.itemManager
         print("hey")
         present(inputViewController, animated: true, completion: nil)
+    }
+    
+    @objc func didDismissInputViewController() {
+        self.tableView.reloadData()
     }
 }
 
