@@ -37,7 +37,7 @@
                                 <rect key="frame" x="0.0" y="27" width="414" height="896"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" indentationWidth="10" reuseIdentifier="itemCell" rowHeight="105" id="cQR-85-6Tb">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" indentationWidth="10" reuseIdentifier="itemCell" rowHeight="105" id="cQR-85-6Tb" customClass="TodoItemCell" customModule="TodoTDD" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="414" height="105"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="cQR-85-6Tb" id="rx1-bp-zpF">
@@ -76,6 +76,9 @@
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
+                                            <outlet property="destcriptionLabel" destination="DIW-Fo-2HN" id="Nn4-Ne-qdc"/>
+                                            <outlet property="doneLabel" destination="NEF-Ls-I5m" id="aYJ-Mm-3rY"/>
+                                            <outlet property="titleLabel" destination="NLb-aa-pOV" id="eh0-MX-TfE"/>
                                             <segue destination="uYX-0O-Fnq" kind="showDetail" id="Uzs-p8-Ig9"/>
                                         </connections>
                                     </tableViewCell>
@@ -195,7 +198,7 @@
                                 <rect key="frame" x="280" y="708" width="34" height="30"/>
                                 <state key="normal" title="Save"/>
                                 <connections>
-                                    <action selector="tapOkButton:" destination="kbm-Um-M0x" eventType="touchUpInside" id="7Dw-gb-wCs"/>
+                                    <action selector="tapSaveButton:" destination="kbm-Um-M0x" eventType="touchUpInside" id="7Dw-gb-wCs"/>
                                 </connections>
                             </button>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Title" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="8Ky-Bx-fBK">
@@ -255,7 +258,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0KX-h4-NBW" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="661" y="-741"/>
+            <point key="canvasLocation" x="660.86956521739137" y="-741.29464285714278"/>
         </scene>
     </scenes>
     <resources>

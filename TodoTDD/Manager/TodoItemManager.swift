@@ -9,6 +9,9 @@
 import UIKit
 
 class ToDoItemManager {
+    
+    static let shared = ToDoItemManager()
+    
     var toDoCount: Int { return toDoItems.count }
     var doneCount: Int { return doneItems.count }
     
@@ -69,8 +72,11 @@ class ToDoItemManager {
         toDoItems.append(item)
     }
     
-    func item(at index: Int) -> ToDoItem {
-        return toDoItems[index]
+    func item(at index: Int?) -> ToDoItem? {
+        if let index = index {
+            return toDoItems[index]
+        }
+        return nil
     }
     
     func doneItem(at index: Int) -> ToDoItem {

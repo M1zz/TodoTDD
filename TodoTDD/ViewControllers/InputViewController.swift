@@ -17,7 +17,6 @@ class InputViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var datePicker: UIDatePicker!
     
     lazy var geocoder = CLGeocoder()
-    var itemManager: ToDoItemManager?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -38,7 +37,7 @@ class InputViewController: UIViewController, UITextFieldDelegate {
     }
     
     
-    @IBAction func tapOkButton(_ sender: Any) {
+    @IBAction func tapSaveButton(_ sender: Any) {
         guard let titleString = titleTextField.text,
           titleString.count > 0 else {
             return
@@ -70,7 +69,8 @@ class InputViewController: UIViewController, UITextFieldDelegate {
                                         itemDescription: descriptionString,
                                         timeStamp: date?.timeIntervalSince1970,
                                         location: nil)
-                    self?.itemManager?.add(item)
+//                    self?.itemManager?.add(item)
+                    ToDoItemManager.shared.add(item)
                     self?.dismiss(animated: true)
                     
 //                    DispatchQueue.main.async {

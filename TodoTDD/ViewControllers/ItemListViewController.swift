@@ -13,6 +13,13 @@ class ItemListViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        tableView.delegate = self
+        tableView.dataSource = self
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        tableView.reloadData()
     }
     
     @IBAction func addItem(_ sender: UIBarButtonItem) {
@@ -23,4 +30,19 @@ class ItemListViewController: UIViewController {
         print("hey")
         present(inputViewController, animated: true, completion: nil)
     }
+}
+
+extension ItemListViewController: UITableViewDelegate, UITableViewDataSource {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return ToDoItemManager.shared.doneCount + ToDoItemManager.shared.toDoCount
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "itemCell") as! TodoItemCell
+        cell.set(index: indexPath.row)
+        
+        return cell
+    }
+    
+    
 }
