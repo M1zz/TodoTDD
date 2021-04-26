@@ -8,7 +8,7 @@
 
 import Foundation
 
-struct ToDoItem {
+struct ToDoItem: Codable {
     let title: String
     let itemDescription: String?
     let timestamp: Double?

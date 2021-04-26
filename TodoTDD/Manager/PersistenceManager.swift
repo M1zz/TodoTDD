@@ -47,7 +47,7 @@ enum PersistenceManager {
 //
     
     static func retrieveTodoItems(completed: @escaping (Result<[ToDoItem], TodoError>) -> Void) {
-        guard let todoData = defaults.object(forKey: Keys.favorites) as? Data else {
+        guard let todoData = defaults.object(forKey: Keys.favorites) as? [ToDoItem] else {
             completed(.success([]))
             return
         }
@@ -68,7 +68,7 @@ enum PersistenceManager {
         do {
             let encoder = JSONEncoder()
             let encodedFavorites = try encoder.encode(items)
-            defaults.setValue(favorites, forKey: Keys.favorites)
+            defaults.setValue(items, forKey: Keys.favorites)
             return nil
         } catch {
             return .uableToFavorite
