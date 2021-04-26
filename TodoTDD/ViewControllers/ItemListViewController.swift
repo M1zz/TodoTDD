@@ -25,8 +25,6 @@ class ItemListViewController: UIViewController {
         guard let inputViewController = storyboard?.instantiateViewController(withIdentifier: "InputViewController") as? InputViewController else {
           return
         }
-        //inputViewController.itemManager = dataProvider.itemManager
-        print("hey")
         present(inputViewController, animated: true, completion: nil)
     }
     
